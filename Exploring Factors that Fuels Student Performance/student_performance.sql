@@ -1,0 +1,22 @@
+CREATE TABLE student_performance(
+	Hours_studied INTEGER,
+	attendance DOUBLE PRECISION,
+	Parental_Involvement VARCHAR(20),
+	Access_to_Resources VARCHAR(20),
+	Extracurricular_Activities VARCHAR(10),
+	Sleep_Hours DOUBLE PRECISION,
+	Previous_Scores DOUBLE PRECISION,
+	Motivation_Level VARCHAR(20),
+	Internet_Access VARCHAR(20),
+	Tutoring_Sessions INTEGER,
+	Family_Income VARCHAR(20),
+	Teacher_Quality VARCHAR(20),
+	School_Type VARCHAR(20),
+	Peer_Influence VARCHAR(10),
+	Physical_Activity INTEGER,
+	Learning_Disabilities VARCHAR(10),
+	Parental_Education_Level VARCHAR(50),
+	Distance_from_Home VARCHAR(20),
+	Gender VARCHAR(10),
+	Exam_Score DOUBLE PRECISION
+)

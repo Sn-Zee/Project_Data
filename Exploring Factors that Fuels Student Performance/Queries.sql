@@ -1,4 +1,5 @@
 --- first question
+--- This query explores if there having 10 hours of study whilst being active in extracurricular activities have a positive impact in students' performance
 
 SELECT
 	hours_studied,
@@ -9,6 +10,7 @@ GROUP BY hours_studied
 ORDER BY hours_studied DESC;
 
 --- second quesiton
+--- The query create bins to segregate data based on number of study time to have an insight if there's a range of study hours that is most effective to impact students' perfromance
 
 SELECT
 	CASE 
@@ -23,6 +25,7 @@ ORDER BY avg_exam_score DESC;
 
 
 --- third question
+--- Query shows rankings based on students' exam scores. Tied scores are ranked with the same number but does not skip any rank numbers
 
 SELECT
 	attendance,

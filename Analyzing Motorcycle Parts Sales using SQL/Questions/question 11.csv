@@ -1,0 +1,19 @@
+"warehouse","product_line","average_price","total_quantity_ordered"
+"Central","Braking system",17.50,1024
+"Central","Suspension & traction",33.65,980
+"Central","Electrical system",25.72,838
+"Central","Frame & body",42.74,698
+"Central","Miscellaneous",22.73,538
+"Central","Engine",60.06,449
+"North","Suspension & traction",34.04,866
+"North","Frame & body",42.60,675
+"North","Electrical system",25.53,607
+"North","Braking system",17.46,605
+"North","Miscellaneous",22.94,379
+"North","Engine",59.13,122
+"West","Braking system",18.74,501
+"West","Suspension & traction",34.80,299
+"West","Miscellaneous",22.81,259
+"West","Electrical system",25.34,253
+"West","Frame & body",43.55,246
+"West","Engine",61.94,56

@@ -57,7 +57,7 @@ Through exploratory data analysis (EDA), this project demonstrates practical SQL
 4. Which product lines generated the worst net revenue in each warehouse?
 5. Which product lines performed the best and worst across all warehouse?
 6. Which product lines received the highest number of orders in each warehouse?
-7. Which product lines were the most popular across all warehouses based on order volume?
+7. Which product line were the most popular across all warehouses based on order volume?
 8. How are Retail and Wholesale customers distributed across each warehouse?
 9. Which payment methods are most frequently used by each client type?
 10. How did warehouse and product line performance change from June to August 2021?

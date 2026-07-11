@@ -120,6 +120,14 @@ FROM quantity_rank
 WHERE ranking = 1 OR ranking = (SELECT MAX(ranking) FROM quantity_rank)
 ORDER BY warehouse, ranking
 
+-- question 7
+SELECT
+	product_line,
+	SUM(quantity) AS total_ordered
+FROM sales
+GROUP BY product_line
+ORDER BY total_ordered DESC
+LIMIT 1;
 
 -- question 11
 

@@ -61,6 +61,7 @@ The objective of this is to demonstrate SQL skills through data exploration, agg
 2. Students who studied 16 or more hours per week achieved the highest average exam score (67.92) among all study-hour groups identified. The analysis indicates a positive relationship between study time and exam performance, with average exam scores are increasing as weekly study hours increases. This suggests that putting more time to study is associated with a better academic performance.
 
 3. Among the top 30 students ranked by exam score, study hours rangef from 11 to 31 hours per week, attendance from 62% to 99%, sleep duration varied between 4 and 9 hours, and tutoring sessions ranged from 0 to 5 per month. These results suggests that high academic performance is associated withh a combination of factors. Additionally, highest ranked student attended five tutoring sessions, the highest number recorded within this group.
+
    While the top student attended five tutoring sessions, several top performing students attended fewer or no tutoring sessions. To further examine the relationship between tutoring and academic performance, an additional analysis was conducted by comparing the average exam scores across different number of tutoring sessions for the entire dataset. The result indicate that students who attends more tutoring sessions generally achieves higher average exam scores, suggesting a positive association between tutoring attendance and academic performance.
 
 ## Future Improvements

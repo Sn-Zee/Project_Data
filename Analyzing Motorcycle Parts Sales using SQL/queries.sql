@@ -129,6 +129,16 @@ GROUP BY product_line
 ORDER BY total_ordered DESC
 LIMIT 1;
 
+-- question 8
+SELECT
+	warehouse,
+	client_type,
+	COUNT(client_type) AS number_of_clients
+FROM sales
+GROUP BY client_type, warehouse
+ORDER BY warehouse
+
+
 -- question 11
 
 SELECT

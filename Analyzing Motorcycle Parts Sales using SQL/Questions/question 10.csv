@@ -1,0 +1,10 @@
+"warehouse","client_type","payment","transaction_count"
+"Central","Retail","Credit card",322
+"Central","Wholesale","Transfer",109
+"Central","Retail","Cash",49
+"North","Retail","Credit card",220
+"North","Wholesale","Transfer",77
+"North","Retail","Cash",43
+"West","Retail","Credit card",117
+"West","Wholesale","Transfer",39
+"West","Retail","Cash",24

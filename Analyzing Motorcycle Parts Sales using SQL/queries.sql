@@ -136,10 +136,29 @@ SELECT
 	COUNT(client_type) AS number_of_clients
 FROM sales
 GROUP BY client_type, warehouse
-ORDER BY warehouse
+ORDER BY warehouse;
+
+-- question 9
+SELECT
+	client_type,
+	payment,
+	COUNT(payment)
+FROM sales
+GROUP BY client_type, payment
+ORDER BY client_type;
+
+-- question 10
+SELECT
+	warehouse,
+	client_type,
+	payment,
+	COUNT(payment) AS transaction_count
+FROM sales
+GROUP BY warehouse, client_type, payment
+ORDER BY warehouse, transaction_count DESC;
 
 
--- question 11
+-- question 12
 
 SELECT
 	warehouse,

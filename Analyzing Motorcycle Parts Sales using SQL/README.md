@@ -61,8 +61,7 @@ Through exploratory data analysis (EDA), this project demonstrates practical SQL
 8. How are Retail and Wholesale customers distributed across each warehouse?
 9. Which payment methods are most frequently used by each client type?
 10. Which payment methods are most frequently used by Retail and Wholesale clients in each warehouse?
-11. What is the average price of each product line by warehouses? Which of it got the highest and lowest order quantity? (tentative)
-12. How did warehouse and product line performance change from June to August 2021?
+11. How did warehouse and product line performance change from June to August 2021?
 
 ## Key Insights
 

@@ -158,8 +158,7 @@ GROUP BY warehouse, client_type, payment
 ORDER BY warehouse, transaction_count DESC;
 
 
--- question 12
-
+-- question 11
 SELECT
 	warehouse,
 	product_line,
@@ -168,3 +167,29 @@ SELECT
 FROM sales
 GROUP BY product_line, warehouse
 ORDER BY warehouse, total_quantity_ordered DESC;
+
+-- question 12
+WITH monthly_revenue AS (
+	SELECT
+		warehouse,
+		product_line,
+		EXTRACT(MONTH FROM date) AS month_number,
+		TO_CHAR(date, 'Month') AS month,
+		SUM(total) - SUM(payment_fee) AS net_revenue
+	FROM sales
+	GROUP BY
+		warehouse,
+		product_line,
+		EXTRACT(MONTH FROM date),
+		TO_CHAR(date, 'Month')
+) 
+
+SELECT 
+	warehouse,
+	product_line,
+	month
+	net_revenue,
+	LAG(net_revenue) OVER(PARTITION BY warehouse, product_line ORDER BY month_number) AS prev_revenue,
+	(net_revenue - LAG(net_revenue) OVER(PARTITION BY warehouse, product_line ORDER BY month_number)) AS change_trend
+FROM monthly_revenue
+ORDER BY warehouse, product_line, month_number;

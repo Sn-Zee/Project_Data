@@ -113,7 +113,7 @@ SELECT
 	highest_ranking
 FROM quantities_warehouse
 WHERE highest_ranking = 1 OR lowest_ranking = 1
-ORDER BY warehouse, total_quantity_ordered DESC
+ORDER BY warehouse, total_quantity_ordered DESC;
 
 -- question 7
 SELECT

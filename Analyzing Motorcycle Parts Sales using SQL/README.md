@@ -55,9 +55,9 @@ Through exploratory data analysis (EDA), this project demonstrates practical SQL
 2. Which warehouse generated the highest and lowest net revenue?
 3. Which product lines generated the highest net revenue within each warehouse?
 4. Which product lines generated the lowest net revenue within warehouse?
-5. Which product lines generated the highest and lowest net revenue across all warehouse?
-6. Which product lines received the highest number of orders within each warehouse?
-7. Which product line received the highest number of orders across all warehouses?
+5. Which product lines generated the highest and lowest net revenue across **all warehouse**?
+6. Which product lines received the highest and lowest number of orders within **each warehouse**?
+7. Which product line received the highest and lowest number of orders across all warehouses?
 8. How are **Retail** and **Wholesale** orders distributed across each warehouse?
 9. Which payment methods are most frequently used by each client type?
 10. Which payment methods are most frequently used by each client type within each warehouse?
@@ -75,7 +75,7 @@ Through exploratory data analysis (EDA), this project demonstrates practical SQL
 
 5. This analysis of product line net revenue indicated that **Suspension & traction** produced the highest net revenue across all warehouses, totaling **73,009.11**. Whereas, the **Miscellaneous** product line generated lowest in net revenue. Comparing the product line performance enables the business to identify revenue-driving products while highlighting lower-performing categories that may require further evaluation of other possible factors.
 
-6. 
+6. The analysis of product line order quantities by warehouse revealed that **Braking System** was the most ordered product line in both **Central (1,024)** and **West (501)** warehouses. In contrast, **Suspension & traction** received the highest number of orders in the North warehouse, totaling to 866. Further analysis revealed that the **Engine** product line recorded the fewest orders across all warehouses. Despite its lower order volume, the Engine product line had an average unit price of approximately 60 across the three warehouses, suggesting taht product pricing may be one of the several factors influencing customer purchasing behavior.
 
 7. The analysis revealed that the **Suspension & traction** product line received the highest number of orders **(2,145)** across all warehouses. It also generated the highest net revenue **(73,009.11)** and was identified as top revenue-generating product, demonstrating consistently strong performance. Additionally, resulsts show that **Braking System** and **Suspension & traction** have almost similar total quantity sold, but **Suspension & traction** generated nearly twice the net revenue. In contrast, although the **Engine** product line recorded the fewest orders, it was not the lowest-performing product line in terms of net revenue, suggesting that order volume alone does not determine overall revenue perfromance. 
 

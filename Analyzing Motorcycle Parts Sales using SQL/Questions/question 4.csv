@@ -1,4 +1,4 @@
-"product_line","warehouse","net_revenue","rank_product"
-"Miscellaneous","Central",12219.69,6
-"Engine","North",7236.35,6
-"Engine","West",3445.27,6
+"product_line","warehouse","net_revenue"
+"Miscellaneous","Central",12219.69
+"Engine","North",7236.35
+"Engine","West",3445.27

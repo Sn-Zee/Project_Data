@@ -19,7 +19,7 @@ FROM sales s
 INNER JOIN productyear p
 ON s.order_number = p.order_number
 GROUP BY s.product_line, month, warehouse
-ORDER BY s.product_line, month, net_revenue DESC;
+ORDER BY warehouse, s.product_line, month, net_revenue DESC;
 
 -- Generated net revenue for each warehouse (question 2)
 
@@ -63,18 +63,10 @@ WITH product_warehouse AS (
 	SELECT
 		product_line,
 		warehouse,
-		SUM(total) - SUM(payment_fee) AS net_revenue
+		SUM(total) - SUM(payment_fee) AS net_revenue,
+		RANK() OVER(PARTITION BY warehouse ORDER BY SUM(total) - SUM(payment_fee) DESC) AS rank_product
 	FROM sales
 	GROUP BY product_line, warehouse
-),
-
-product_rank AS (
-	SELECT
-		product_line,
-		warehouse,
-		net_revenue,
-		RANK() OVER(PARTITION BY warehouse ORDER BY net_revenue DESC) AS rank_product
-	FROM product_warehouse
 )
 
 SELECT
@@ -82,8 +74,8 @@ SELECT
 	warehouse,
 	net_revenue,
 	rank_product
-FROM product_rank
-WHERE rank_product = (SELECT max(rank_product) FROM product_rank);
+FROM product_warehouse
+WHERE rank_product = (SELECT max(rank_product) FROM product_warehouse);
 
 --Best and worst selling product line across all warehouse (question 5)
 SELECT
@@ -92,7 +84,7 @@ SELECT
 	(SUM(total) - SUM(payment_fee)) AS net_revenue
 FROM sales
 GROUP BY product_line
-ORDER BY net_revenue DESC;
+ORDER BY total_quantity DESC;
 
 -- (question 6)
 WITH quantities_warehouse AS (
@@ -157,18 +149,7 @@ FROM sales
 GROUP BY warehouse, client_type, payment
 ORDER BY warehouse, transaction_count DESC;
 
-
 -- question 11
-SELECT
-	warehouse,
-	product_line,
-	ROUND(AVG(unit_price),2) AS average_price,
-	SUM(quantity) AS total_quantity_ordered
-FROM sales
-GROUP BY product_line, warehouse
-ORDER BY warehouse, total_quantity_ordered DESC;
-
--- question 12
 WITH monthly_revenue AS (
 	SELECT
 		warehouse,

@@ -64,7 +64,7 @@ WITH product_warehouse AS (
 		product_line,
 		warehouse,
 		SUM(total) - SUM(payment_fee) AS net_revenue,
-		RANK() OVER(PARTITION BY warehouse ORDER BY SUM(total) - SUM(payment_fee) DESC) AS rank_product
+		RANK() OVER(PARTITION BY warehouse ORDER BY SUM(total) - SUM(payment_fee)) AS rank_product
 	FROM sales
 	GROUP BY product_line, warehouse
 )
@@ -72,10 +72,9 @@ WITH product_warehouse AS (
 SELECT
 	product_line,
 	warehouse,
-	net_revenue,
-	rank_product
+	net_revenue
 FROM product_warehouse
-WHERE rank_product = (SELECT max(rank_product) FROM product_warehouse);
+WHERE rank_product = 1;
 
 --Best and worst selling product line across all warehouse (question 5)
 SELECT
@@ -84,7 +83,7 @@ SELECT
 	(SUM(total) - SUM(payment_fee)) AS net_revenue
 FROM sales
 GROUP BY product_line
-ORDER BY total_quantity DESC;
+ORDER BY net_revenue DESC;
 
 -- (question 6)
 WITH quantities_warehouse AS (
@@ -92,25 +91,29 @@ WITH quantities_warehouse AS (
 		warehouse,
 		product_line,
 		ROUND(AVG(unit_price), 2) AS average_price,
-		SUM(quantity) AS total_quantity_ordered
+		SUM(quantity) AS total_quantity_ordered,
+		RANK () OVER(
+			PARTITION BY warehouse 
+			ORDER BY SUM(quantity) DESC
+		) AS highest_ranking,
+		RANK () OVER(
+			PARTITION BY warehouse
+			ORDER BY SUM(quantity) 
+		) AS lowest_ranking
 FROM sales
-GROUP BY product_line, warehouse
-),
+GROUP BY warehouse, product_line
 
-quantity_rank AS (
-	SELECT
-		warehouse,
-		product_line,
-		total_quantity_ordered,
-		average_price,
-		RANK() OVER(PARTITION BY warehouse ORDER BY total_quantity_ordered DESC) AS ranking
-		FROM quantities_warehouse
 )
 
-SELECT warehouse, product_line,  average_price, total_quantity_ordered
-FROM quantity_rank
-WHERE ranking = 1 OR ranking = (SELECT MAX(ranking) FROM quantity_rank)
-ORDER BY warehouse, ranking
+SELECT 
+	warehouse, 
+	product_line,  
+	average_price, 
+	total_quantity_ordered,
+	highest_ranking
+FROM quantities_warehouse
+WHERE highest_ranking = 1 OR lowest_ranking = 1
+ORDER BY warehouse, total_quantity_ordered DESC
 
 -- question 7
 SELECT

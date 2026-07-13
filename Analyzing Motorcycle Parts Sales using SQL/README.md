@@ -1,4 +1,4 @@
-# Analyzing Motorcycle Parts Sales Using SQL
+<h1 align="center"> Analyzing Motorcycle Parts Sales Using SQL </h1>
 
 ## Project Overview
 

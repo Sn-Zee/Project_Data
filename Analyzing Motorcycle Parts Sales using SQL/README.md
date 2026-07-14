@@ -33,7 +33,7 @@ Through exploratory data analysis (EDA), this project demonstrates practical SQL
 | `payment_fee` | `FLOAT` | Percentage of `total` charged as a result of the `payment` method |
 
 
-## Technologies Used'
+## Technologies Used
 
 - SQL
 - PostgreSQL
@@ -79,7 +79,7 @@ Through exploratory data analysis (EDA), this project demonstrates practical SQL
 
 7. The analysis revealed that the **Suspension & traction** product line received the highest number of orders **(2,145)** across all warehouses. It also generated the highest net revenue **(73,009.11)** and was identified as top revenue-generating product, demonstrating consistently strong performance. Additionally, resulsts show that **Braking System** and **Suspension & traction** have almost similar total quantity sold, but **Suspension & traction** generated nearly twice the net revenue. In contrast, although the **Engine** product line recorded the fewest orders, it was not the lowest-performing product line in terms of net revenue, suggesting that order volume alone does not determine overall revenue perfromance. 
 
-8. 
+8. The analysis revealed tat **Retail** orders accounted for the majority of transactions across all warehouses, indicating that Retail customers comprised the primary source of sales. Additionally, the **Central** warehouse recorded the highest number of both **Retail (371)** and **Wholesale (109)** orders, while the **West** warehouse had the lowest order counts. 
 
 9. 
 

@@ -1,4 +1,4 @@
-"warehouse","client_type","number_of_clients"
+"warehouse","client_type","number_of_orders"
 "Central","Retail",371
 "Central","Wholesale",109
 "North","Retail",263

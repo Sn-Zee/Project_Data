@@ -128,7 +128,7 @@ LIMIT 1;
 SELECT
 	warehouse,
 	client_type,
-	COUNT(client_type) AS number_of_clients
+	COUNT(client_type) AS number_of_orders
 FROM sales
 GROUP BY client_type, warehouse
 ORDER BY warehouse;

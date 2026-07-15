@@ -137,22 +137,13 @@ ORDER BY warehouse;
 SELECT
 	client_type,
 	payment,
-	COUNT(payment)
+	payment_fee,
+	COUNT(payment) AS number_of_orders
 FROM sales
-GROUP BY client_type, payment
+GROUP BY client_type, payment, payment_fee
 ORDER BY client_type;
 
 -- question 10
-SELECT
-	warehouse,
-	client_type,
-	payment,
-	COUNT(payment) AS transaction_count
-FROM sales
-GROUP BY warehouse, client_type, payment
-ORDER BY warehouse, transaction_count DESC;
-
--- question 11
 WITH monthly_revenue AS (
 	SELECT
 		warehouse,
@@ -171,7 +162,7 @@ WITH monthly_revenue AS (
 SELECT 
 	warehouse,
 	product_line,
-	month
+	month,
 	net_revenue,
 	LAG(net_revenue) OVER(PARTITION BY warehouse, product_line ORDER BY month_number) AS prev_revenue,
 	(net_revenue - LAG(net_revenue) OVER(PARTITION BY warehouse, product_line ORDER BY month_number)) AS change_trend

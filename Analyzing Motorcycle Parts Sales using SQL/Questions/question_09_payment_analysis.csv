@@ -1,0 +1,4 @@
+"client_type","payment","payment_fee","number_of_orders"
+"Retail","Credit card",0.03,659
+"Retail","Cash",0.00,116
+"Wholesale","Transfer",0.01,225

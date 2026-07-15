@@ -122,7 +122,8 @@ The analysis was performed using SQL in PostgreSQL following an Exploratory Data
 10. 
     **Central Warehouse**
     ```
-    The analysis revealed that only the Engine and Frame & body product lines recorded positive revenue growth from July to August in the Central warehouse. Despite experiencing a decline between June and July, both product lines rebounded strongly in August, reaching their highest monthly net revenues during the three-month period.
+    The analysis revealed that only the Engine and Frame & body product lines recorded positive revenue growth from July to August in the Central warehouse. 
+    Despite experiencing a decline between June and July, both product lines rebounded strongly in August, reaching their highest monthly net revenues during the three-month period.
     ```
 
     **North Warehouse**

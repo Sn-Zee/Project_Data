@@ -122,16 +122,16 @@ The analysis was performed using SQL in PostgreSQL following an Exploratory Data
 10. 
     **Central Warehouse**
     
-    The analysis revealed that only the Engine and Frame & body product lines recorded positive revenue growth from July to August in the Central warehouse. Despite experiencing a decline between June and July, both product lines rebounded strongly in August, reaching their highest monthly net revenues during the three-month period.
+        The analysis revealed that only the Engine and Frame & body product lines recorded positive revenue growth from July to August in the Central warehouse. Despite experiencing a decline between June and July, both product lines rebounded strongly in August, reaching their highest monthly net revenues during the three-month period.
 
     **North Warehouse**
     
-    In the North warehouse, Braking system and Miscellaneous finished the period with declining revenue trends. Converesly, the Electrical system product line recorded the highest month-to-month increase between July and August, indicating a rebound in sales.
+        In the North warehouse, Braking system and Miscellaneous finished the period with declining revenue trends. Converesly, the Electrical system product line recorded the highest month-to-month increase between July and August, indicating a rebound in sales.
     
 
     **West Warehouse**
 
-    The West warehouse exhibitied mixed performance across product lines. While Engine recordedno sales in Augsut, Suspension & Traction maintained relatively stable revenue throughout the three-month period and finished with positive growth. In contrast, Frame & body and  Miscellaneous experienced continuous declines in monthly in monthly net revenue from June throughout August.
+        The West warehouse exhibitied mixed performance across product lines. While Engine recordedno sales in Augsut, Suspension & Traction maintained relatively stable revenue throughout the three-month period and finished with positive growth. In contrast, Frame & body and  Miscellaneous experienced continuous declines in monthly in monthly net revenue from June throughout August.
 
     Overall, the trend analysis highlights the month-to-month performance of each product line across the three warehouse, emphasizing the importance of continuously monitoring sales trends to support inventory planning, promotions strategies, and timely business decisions.
 

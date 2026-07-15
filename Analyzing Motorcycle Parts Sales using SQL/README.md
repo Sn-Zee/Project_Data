@@ -19,7 +19,7 @@ Through exploratory data analysis (EDA), this project demonstrates practical SQL
 ## Repository structure
 ```
 Analyzing Motorcycle Parts Sales Using SQL/
-├── dataset/
+├── Dataset/
 │   └── Motorcycle Parts Sales Data.csv
 ├── Questions/
 │   ├── question_01_wholesale_net_revenue.csv

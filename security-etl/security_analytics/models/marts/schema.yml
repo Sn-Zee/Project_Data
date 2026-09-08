@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: mart_brute_force_attempts
+    description: "Detected brute force login attempts with 5+ failures per hour the same user and IP"
+    columns:
+      - name: username
+        tests:
+          - not_null
+      - name: failure_count
+        tests:
+          - not_null
+
+  - name: mart_after_hours_access
+    description: "Users with security events outside business hours or on weekends"
+    columns:
+      - name: username
+        tests:
+          - not_null
+      - name: after_hours_events
+        tests:
+          - not_null

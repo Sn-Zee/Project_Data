@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: public
+    tables:
+      - name: raw_security_events
+        descriptions: "Raw security event logs loaded by the Python generator"

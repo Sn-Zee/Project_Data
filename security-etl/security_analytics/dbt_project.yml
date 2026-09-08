@@ -1,0 +1,21 @@
+name: 'security_analytics'
+version: '1.0.0'
+
+profile: 'new_security_analytics'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  security_analytics:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_security_events
+    description: "Cleaned and normalized security events"
+    columns:
+      - name: username
+        description: "Lowercase, trimmed username"
+        tests:
+          - not_null
+      - name: event_type
+        description: "Uppercase, standardized event type"
+        tests:
+          - not_null
+      - name: event_timestamp
+        description: "Timestamp of the event"
+        tests:
+          - not_null

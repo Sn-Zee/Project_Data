@@ -1,0 +1,13 @@
+# Docker-specific dbt profile: connects to the postgres container
+security_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: postgres
+      password: postgres
+      port: 5432
+      dbname: security_analytics
+      schema: analytics
+      threads: 4

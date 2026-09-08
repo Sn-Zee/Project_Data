@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw_weather
+    schema: raw_weather
+    tables:
+      - name: weather_observations
+
+models:
+  - name: stg_weather_observations
+    columns:
+      - name: city_name
+        tests:
+          - not_null
+      - name: observation_timestamp
+        tests:
+          - not_null
+      - name: temperature_celsius
+        tests:
+          - not_null
+      - name: city_timestamp_id
+        tests:
+          - unique

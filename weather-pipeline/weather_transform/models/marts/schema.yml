@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: mart_daily_weather_summary
+    columns:
+      - name: city_name
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["London", "New York", "Tokyo", "Sydney", "Berlin"]
+      - name: observation_date
+        tests:
+          - not_null
+      - name: avg_temperature
+        tests:
+          - not_null
+      - name: temperature_rank
+        tests:
+          - not_null
+  - name: mart_weather_alerts
+    columns:
+      - name: city_name
+        tests:
+          - not_null
+      - name: observation_date
+        tests:
+          - not_null
+      - name: alert_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["EXTREME_TEMP_CHANGE"]

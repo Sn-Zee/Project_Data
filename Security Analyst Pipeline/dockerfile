@@ -1,0 +1,15 @@
+# Start from a lightweight Python image
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# Install dbt with the PostgreSQL adapter
+RUN pip install --no-cache-dir dbt-postgres==1.11.0
+
+# Copy the loader script, dbt project, and Docker-specific profile
+COPY load_security_data.py .
+COPY security_analytics/ ./security_analytics/
+COPY docker_profiles.yml /root/.dbt/profiles.yml
+
+# Run the full pipeline: load data, transform with dbt, test
+CMD ["sh", "-c", "python load_security_data.py && cd security_analytics && dbt run && dbt test"]

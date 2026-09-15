@@ -92,7 +92,7 @@ The raw dataset contains **2.8M+ network flow records and approxiamtely 79 colum
 
 This initial approach was intentionally used to identify data quality and modeling probllems before building the final ETL pipeline
 
-**3. Data Quality Analysis**
+**3. Data Quality Analysis**\
 Exploratory SQL queries identifies several issues in the raw dataset:
 
 * Leading/trailing spaces in column names
@@ -111,7 +111,7 @@ Label
 
 These issues motivated the development of the cleaned ETL pipeline and star schema
 
-**4. Star Schema Design**
+**4. Star Schema Design**\
 The final database uses a **star schema** consisting of two dimension tables and one central fact table.
 
 **Dimension Tables**
@@ -169,7 +169,7 @@ The resulting structure is:
 
 This separates descriptive attributes from measurable network-flow data and makes analytical queries easier to maintain.
 
-**5. ETL Pipeline**
+**5. ETL Pipeline**\
 `etl_pipeline.py` performs the complete transformation process.
 
 **Extract**

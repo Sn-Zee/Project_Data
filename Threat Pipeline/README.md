@@ -324,7 +324,7 @@ The project expects:
 
 **4. Run analytical queries**
 
-``psql -U postgres -d threat_analytics -f queries.sql
+``psql -U postgres -d threat_analytics -f queries.sql``
 
 **5. Launch the dashboard**
 

@@ -6,12 +6,33 @@ import glob
 import numpy as np
 import sys
 from scipy import stats
+from dotenv import load_dotenv
+from pathlib import Path
 
+# Project root
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# .env file location
+ENV_FILE = BASE_DIR / ".env"
+
+print(f"Project root: {BASE_DIR}")
+print(f"Looking for .env at: {ENV_FILE}")
+print(f".env exists: {ENV_FILE.exists()}")
+
+# Load .env
+load_dotenv(ENV_FILE)
 
 # Database connection settings
 database_url = os.getenv("DATABASE_URL")
 
-# Create SQLAlchemy engine for pandas operations
+if not database_url:
+    raise ValueError(
+        f"DATABASE_URL was not found. Check that your .env file exists at: {ENV_FILE}"
+    )
+
+print("DATABASE_URL loaded successfully.")
+
+# Create SQLAlchemy engine
 engine = create_engine(database_url)
 
 # Map raw attack labels to higher-level categories
@@ -86,7 +107,7 @@ final_count = len(combined)
 print(f"Final clean row count: {final_count}")
 
 # Connect to PostgreSQL and create star schema tables
-conn = psycopg2.connect(**DB_CONFIG)
+conn = psycopg2.connect(database_url)
 cur = conn.cursor()
 
 schema_sql = """DROP TABLE IF EXISTS fact_flows CASCADE;

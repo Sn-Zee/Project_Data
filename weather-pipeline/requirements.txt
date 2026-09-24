@@ -1,0 +1,14 @@
+# dbt
+dbt-postgres==1.11.0
+
+# API requests
+requests
+
+# PostgreSQL database connectivity
+psycopg2-binary
+
+# Data analysis
+pandas
+
+# Data Visualization
+matplotlib
